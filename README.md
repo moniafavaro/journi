@@ -67,6 +67,8 @@ And we had a wireframe to show how we wanted the home page to look like:
 </p>
 
 
+## Build
+
 ### Work Split 
 
 #### Backend
