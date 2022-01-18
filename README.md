@@ -14,8 +14,9 @@ Timeframe: 1 week.
 
 ## Project Overview
 
-We were inspired to create something which circulated around social media with a strong influence centred around the feed and using a map API.
+My third project on the General Assembly Software Engineering Immersive course at General Assembly and my first group project. 
 
+We were inspired to create something which circulated around social media with a strong influence centred around the feed and using a map API.
 
 <!-- video -->
 
