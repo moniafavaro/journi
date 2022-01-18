@@ -4,15 +4,18 @@
 
 Design a social media where people can share their trips with an online community which incorporates maps and ratings. 
 
+Group project with [Preston Ng](https://github.com/sungchun) and [Reisli Hysa](https://github.com/ReiHysa).
+
+
 ## Timeframe
 
 Timeframe: 1 week.
 
-## Inspiration
+
+## Project Overview
 
 We were inspired to create something which circulated around social media with a strong influence centred around the feed and using a map API.
 
-## Project Overview
 
 <!-- video -->
 
@@ -22,21 +25,15 @@ The website can be viewed here, however, we have found out that the api only wor
 
 https://journi-media.herokuapp.com/login
 
+
 ## Getting Started
 
-As a team we did the backend together, following guidance from previous homework from the Bootcamp.
-
-On the backend we created our own database which gave ownership to account posts and created a following system.
-
-First of all we created a register and login page, and then we focused on the homepage, where you can see a map and on the side is the feed.
-
-The feed works well, and is influenced by your friends posts and is ordered by the date it was posted. 
-
-We used mapBox to create our own map which had points and locations attached to it based on the locations put within the posts, this created almost a pinning map system which was the main focus when creating this platform.
-
-So when you click on a post it will show you the exact location on the map.
-
-I was focussed on integrating the frontend with the backend, home and profile page, search bar, as well as other small functionalities and styling.
+1. Clone or download the repo in your CLI.
+2. Install dependencies `npm i`.
+3. Start the database on your CLI with `mongod --dbpath ~/data/db`, close the terminal, then open again and use `mongosh`.
+4. Open the backend folder and start server using nodemon `yarn start`.
+5. Change into front-end folder `cd frontend`.
+6. Run the frontend with `npm start`.
 
 ## Technologies Used
 
@@ -58,15 +55,98 @@ I was focussed on integrating the frontend with the backend, home and profile pa
 As we learnt through the course, it is best practice to start with a pseudocode.
 
 <p align='center'>
-    <img width='300' height='450' src='https://user-images.githubusercontent.com/60261970/149829138-bf29fa87-e25e-4c9b-b34b-354dbf4c3d1b.png'>
-  <img width='300' height='450' src='https://user-images.githubusercontent.com/60261970/149829143-cd703d50-b7bc-4d40-8613-3496e2979caa.png'>
-  <img width='300' height='450' src='https://user-images.githubusercontent.com/60261970/149829149-6af4055f-bec2-4cef-be7d-1abb7dbb25e6.png'>
+    <img width='310' height='400' src='https://user-images.githubusercontent.com/60261970/149829138-bf29fa87-e25e-4c9b-b34b-354dbf4c3d1b.png'>
+  <img width='310' height='400' src='https://user-images.githubusercontent.com/60261970/149829143-cd703d50-b7bc-4d40-8613-3496e2979caa.png'>
+  <img width='310' height='400' src='https://user-images.githubusercontent.com/60261970/149829149-6af4055f-bec2-4cef-be7d-1abb7dbb25e6.png'>
 </p>
 
 And we had a wireframe to show how we wanted the home page to look like:
 <p align='center'>
-    <img width='500' height='360' src='https://user-images.githubusercontent.com/60261970/149829460-21284d69-dba2-44da-83ff-a2687d4fbfb2.png'>
+    <img width='500' height='320' src='https://user-images.githubusercontent.com/60261970/149829460-21284d69-dba2-44da-83ff-a2687d4fbfb2.png'>
 </p>
+
+
+### Work Split 
+
+#### Backend
+
+* As a team we did the backend together, following guidance from previous homework from the Bootcamp.
+* On the backend we created our own database with a few posts and main users.
+
+<p align='center'>
+    <img width='760' height='320' src='https://user-images.githubusercontent.com/60261970/149957335-49812daa-52cd-4e5c-b685-2ad2d1b46f82.png'>
+    <img width='450' height='440' src='https://user-images.githubusercontent.com/60261970/149958279-3fe79121-abd8-49e7-bbbd-35c4cd161c86.png'>
+</p>
+
+* Register and Login.
+
+<p align='center'>
+    <img width='440' height='220' src='https://user-images.githubusercontent.com/60261970/149964175-3ef29ed0-72c4-47f1-b520-09ab59829c5d.png'>
+    <img width='460' height='300' src='https://user-images.githubusercontent.com/60261970/149964202-62442df2-38d5-41b4-94e5-28323fabe08b.png'>
+</p>
+
+* Follow/Unfollow functions.
+
+<p align='center'>
+    <img width='450' height='400' src='https://user-images.githubusercontent.com/60261970/149963577-39df997e-2e2e-4617-987e-985e96834631.png'>
+    <img width='450' height='400' src='https://user-images.githubusercontent.com/60261970/149963585-1f0dc8f1-1eac-4433-b526-2393d30bf877.png'>
+</p>
+
+#### Frontend
+
+* Preston
+    * Display map from MapBox API.
+    * Show points on map.
+    * Implemented search bar so the user can look for places.
+    * When you click on a post location it will show you the exact location on the map.
+
+<p align='center'>
+    <img width='400' height='340' src='https://user-images.githubusercontent.com/60261970/149959131-c056b8c8-b75a-4a31-9a05-75318a855bbb.png'>
+</p>
+
+    
+* Reisli
+    * Created a register and login page.
+    * Created follower/following sistem.
+
+<p align='center'>
+    <img width='320' height='400' src='https://user-images.githubusercontent.com/60261970/149959163-9a8f262f-339b-481a-8059-efe678e3b658.png'>
+    <img width='320' height='400' src='https://user-images.githubusercontent.com/60261970/149959176-74477d20-fb1c-4d2f-9992-e83e28ffb180.png'>
+</p>
+
+    
+* Monia
+    * Created homepage, where you can see a map card and on the side is the feed card.
+    * Profile page, where you can see details about the user, a map card and at the bottom the user feed, where you can see the images and the name of the location.
+    * Nav bar with links, logo and search bar.
+    * Search bar where the user can look for other accounts.
+    
+    <p align='center'>
+    <img width='440' height='440' src='https://user-images.githubusercontent.com/60261970/149959373-9001db3e-297d-4b7d-9387-da22a4e7f6e1.png'>
+    
+    <img width='440' height='440' src='https://user-images.githubusercontent.com/60261970/149959382-a9bc53c0-8e15-452c-9dd1-8d94917a8f1c.png'>
+</p>
+
+https://user-images.githubusercontent.com/60261970/149960117-8ae73c73-5a8c-41b3-921f-dbe94d672692.mov
+
+
+#### Styling
+
+* Preston
+    * MapBox.
+    
+* Reisli
+    * Uploading image on profile.
+    * Add bio description.
+    * Follow button.
+    * Comment section.
+    
+* Monia
+    * Profile card, with space for image and description.
+    * Profile feed with images and name of the location.
+    * Add a new post with a modal from React Bootstrap.
+    * Journi logo.
+    
 
 ## Known Bugs
 
@@ -79,12 +159,16 @@ And we had a wireframe to show how we wanted the home page to look like:
 * At the beginning we had a little trouble with the map API, and at the end with the followers/following, but everything worked just fine.
 * The comments section didn't have much styling, but we managed to make it look better.
 
+
 ## Wins
 
 * The biggest win was to make the map API work with the pinpoints.
 * The search bar where the user can search for places in the globe as well as other accounts.
 * Follower/Following working perfectly well.
 * Comments displaying nicely.
+* The final product had many functions and worked very well, but we had prepared our backend to accept other forms of requests which we did not end up having enough time to incorporate but this did not stop us from going past our MVP and creating a working, functional social media platform.
+* In general we work well as a group, with many ideas and always considering the other opinions.
+
 
 ## Future Enhancements
 
@@ -93,25 +177,7 @@ And we had a wireframe to show how we wanted the home page to look like:
 
 ## Key Learnings
 
-* Create and populate a mongo database + working with express and node.
+* Create and populate a Mongo database + working with express and node.
 * React Bootstrap, for me, is one of the best frameworks for styling.
 * CRUD: Learning how to implement CRUD functionalities.
 
-## Teamwork
-
-The final product had many functions and worked very well, but we had prepared our backend to accept other forms of requests which we did not end up having enough time to incorporate but this did not stop us from going past our MVP and creating a working, functional social media platform.
-
-In general we work well as a group, with many ideas and always considering the other opinions.
-
-
-## How to Use it
-
-The user is able to register and login, and when they are in the profile page, they can add their own photo, bio description and see their followers. 
-
-They can see a map with their own posts and add posts as well.
-
-With the search bar, the user can look for location or other users.
-
-When the user is in someone else's profile they can see their posts and also follow this account.
-
-In the home page the user will see the map and the feed with the accounts they follow, and they can leave comments in other accounts' posts.
