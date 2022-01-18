@@ -80,12 +80,18 @@ And we had a wireframe to show how we wanted the home page to look like:
 
 * Register and Login.
 
+    * Register function will create a new User in the database, using `.create`, and welcoming the new user when the registration is successful.
+    * Login function will look for the User username in the database and check if the password is valid, if valid it will assign a token for the user for 7 days, if not will return an 'unauthorised' message.
+
 <p align='center'>
     <img width='440' height='220' src='https://user-images.githubusercontent.com/60261970/149964175-3ef29ed0-72c4-47f1-b520-09ab59829c5d.png'>
     <img width='460' height='300' src='https://user-images.githubusercontent.com/60261970/149964202-62442df2-38d5-41b4-94e5-28323fabe08b.png'>
 </p>
 
 * Follow/Unfollow functions.
+
+    * Follow function will check the User id with `.findById`, check if the user already follow that account, if not it will use `push` and `save` to 'following' and 'followers', and 'me' and 'profileToFollow' variables.
+    * Unfollow function will check if the user follows that account, and then will use `indexOf` and `splice` to remove the user account from the other followers count.
 
 <p align='center'>
     <img width='450' height='400' src='https://user-images.githubusercontent.com/60261970/149963577-39df997e-2e2e-4617-987e-985e96834631.png'>
