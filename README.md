@@ -101,27 +101,34 @@ And we had a wireframe to show how we wanted the home page to look like:
     <img width='450' height='400' src='https://user-images.githubusercontent.com/60261970/149963585-1f0dc8f1-1eac-4433-b526-2393d30bf877.png'>
 </p>
 
+
 #### Frontend
 
 * Preston
     * Display map from MapBox API.
     * Show points on map.
-    * Implemented search bar so the user can look for places.
     * When you click on a post location it will show you the exact location on the map.
+    * Implemented search bar so the user can look for places.
 
-<p align='center'>
-    <img width='400' height='340' src='https://user-images.githubusercontent.com/60261970/149959131-c056b8c8-b75a-4a31-9a05-75318a855bbb.png'>
-</p>
-
+* Here Preston used 3 `useEffect`, the first one he's setting the API, the 'pointer' that we thought to be the nicest one to pin the location and the font that will be display in the map.
+* The second `useEffect` is to set the longitude and lattude that we wanted to show, and how much zoom the map will have.
+* The third `useEffect` makes the map 'fly' to the chosen location, so when you press one of the locations pinned in the map, it will zoom into that location.
     
+    <p align='center'>
+        <img width='450' height='500' src='https://user-images.githubusercontent.com/60261970/150384306-23366e74-20b6-4480-b771-e3da9179475e.png'>
+        <img width='450' height='300' src='https://user-images.githubusercontent.com/60261970/150384314-9550cacc-dba9-4628-bb26-c462ada0ebc1.png'>
+    </p>
+
+
 * Reisli
     * Created a register and login page.
-    * Created follower/following sistem.
-
-<p align='center'>
-    <img width='320' height='400' src='https://user-images.githubusercontent.com/60261970/149959163-9a8f262f-339b-481a-8059-efe678e3b658.png'>
-    <img width='320' height='400' src='https://user-images.githubusercontent.com/60261970/149959176-74477d20-fb1c-4d2f-9992-e83e28ffb180.png'>
-</p>
+    * Follow button.
+    
+* With the follow button, Reisli added an `useEffect` to check if the account has an 'userInfo', 'followingId' and 'allPosts', then it will `filter` the posts and `includes` the follower.
+    
+     <p align='center'>
+        <img width='400' height='340' src='https://user-images.githubusercontent.com/60261970/150384691-8b65279a-1b0f-4a06-a300-4f309f997dba.png'>
+    </p>
 
     
 * Monia
@@ -129,12 +136,13 @@ And we had a wireframe to show how we wanted the home page to look like:
     * Profile page, where you can see details about the user, a map card and at the bottom the user feed, where you can see the images and the name of the location.
     * Nav bar with links, logo and search bar.
     * Search bar where the user can look for other accounts.
+
+* In the search bar component, I used an `async` function where it will check if there exists a post with the initials added in the search bar or a profile, if there's one it will show in the bar, otherwise it will show nothing.
     
-    <p align='center'>
-    <img width='440' height='440' src='https://user-images.githubusercontent.com/60261970/149959373-9001db3e-297d-4b7d-9387-da22a4e7f6e1.png'>
-    
-    <img width='440' height='440' src='https://user-images.githubusercontent.com/60261970/149959382-a9bc53c0-8e15-452c-9dd1-8d94917a8f1c.png'>
-</p>
+     <p align='center'>
+        <img width='400' height='440' src='https://user-images.githubusercontent.com/60261970/150384760-869d9b9e-3ce7-4e51-a59a-99ec905d5aac.png'>
+    </p>
+
 
 https://user-images.githubusercontent.com/60261970/149960117-8ae73c73-5a8c-41b3-921f-dbe94d672692.mov
 
@@ -143,12 +151,20 @@ https://user-images.githubusercontent.com/60261970/149960117-8ae73c73-5a8c-41b3-
 
 * Preston
     * MapBox.
+
+    <p align='center'>
+        <img width='400' height='340' src='https://user-images.githubusercontent.com/60261970/149959131-c056b8c8-b75a-4a31-9a05-75318a855bbb.png'>
+    </p>
     
 * Reisli
-    * Uploading image on profile.
-    * Add bio description.
+    * Register and login page.
     * Follow button.
     * Comment section.
+
+    <p align='center'>
+        <img width='320' height='400' src='https://user-images.githubusercontent.com/60261970/149959163-9a8f262f-339b-481a-8059-efe678e3b658.png'>
+        <img width='320' height='400' src='https://user-images.githubusercontent.com/60261970/149959176-74477d20-fb1c-4d2f-9992-e83e28ffb180.png'>
+    </p>
     
 * Monia
     * Profile card, with space for image and description.
@@ -156,6 +172,10 @@ https://user-images.githubusercontent.com/60261970/149960117-8ae73c73-5a8c-41b3-
     * Add a new post with a modal from React Bootstrap.
     * Journi logo.
     
+    <p align='center'>
+        <img width='440' height='440' src='https://user-images.githubusercontent.com/60261970/149959373-9001db3e-297d-4b7d-9387-da22a4e7f6e1.png'>
+        <img width='440' height='440' src='https://user-images.githubusercontent.com/60261970/149959382-a9bc53c0-8e15-452c-9dd1-8d94917a8f1c.png'>
+    </p>
 
 ## Known Bugs
 
